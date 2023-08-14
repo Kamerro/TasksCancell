@@ -20,7 +20,7 @@ internal class Program
         Task task_better = new Task(() => {
             while (true)
             {
-                token.Token.ThrowIfCancellationRequested();
+                paranoid.Token.ThrowIfCancellationRequested();
                 Console.WriteLine("OK \t");
             }
         }, paranoid.Token);
